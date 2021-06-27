@@ -30,15 +30,15 @@ export default {
         let legendData = [];
         let data1 = [];
         let data2 = [];
-        if (currentChart === 0) {
-          legendData = [orderData.legend1, orderData.legend2];
-          data1 = orderData.data1;
-          data2 = orderData.data2;
-        } else {
-          legendData = [rateData.legend1, rateData.legend2];
-          data1 = rateData.data1;
-          data2 = rateData.data2;
-        }
+         if (currentChart === 0) {
+            legendData = [orderData.legend1, orderData.legend2]
+            data1 = orderData.data1
+            data2 = orderData.data2
+          } else {
+            legendData = [rateData.legend1, rateData.legend2]
+            data1 = rateData.data1
+            data2 = rateData.data2
+          }
          options.value =  {
           color: colors,
           tooltip: {

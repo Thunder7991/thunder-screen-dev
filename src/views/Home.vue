@@ -57,7 +57,7 @@
               <div class="right-left4">11</div>
             </div>
             <div class="right-right">
-              <div class="right-right1">12</div>
+              <div class="right-right1"><sales-list :data="salesListData"></sales-list></div>
               <div class="right-right2">13</div>
             </div>
           </div>
@@ -79,6 +79,7 @@ import TotalRider from "../components/TotalRider/index.vue";
 import HotCategory from "../components/HotCategory/index";
 import CenterHeader from "../components/CenterHeader/index.vue";
 import TransformCategory from "../components/TransformCategory/index.vue";
+import SalesList from '../components/SalesList/index.vue'
 // @ is an alias to /src
 import { ref, onMounted } from "vue";
 export default {
@@ -92,7 +93,8 @@ export default {
     TotalRider,
     HotCategory,
     CenterHeader,
-    TransformCategory
+    TransformCategory,
+    SalesList
   },
   setup() {
     const loading = ref(true);
@@ -227,10 +229,10 @@ export default {
             flex-direction: column;
             justify-content: space-between;
             margin-left: 10px;
+            margin-right: 20px;
             .right-right1 {
               width: 100%;
               height: 999px;
-              background: yellowgreen;
             }
             .right-right2 {
               flex: 1;
