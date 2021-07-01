@@ -10,6 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "echarts": "^5.1.2",
+    "echarts-gl": "^2.0.5",
+    "lodash": "^4.17.21",
     "thunder-libs-dev": "1.0.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
