@@ -46,19 +46,20 @@
           </div>
           <div class="right-bottom">
             <div class="right-left">
-              <div class="right-left1"><map-warning></map-warning></div>
+              <div class="right-left1"><order-map></order-map></div>
               <div class="right-left2">
                 <transform-category
                   :data="['订单量', '销售额', '用户数', '退单量']"
                   :color="['rgb(178,209,126)', 'rgb(16,116,49)']"
                 ></transform-category>
               </div>
-              <div class="right-left3">11</div>
+              <div class="right-left3"></div>
               <div class="right-left4">11</div>
             </div>
             <div class="right-right">
               <div class="right-right1">
                 <sales-list :data="salesListData"></sales-list>
+                
               </div>
               <div class="right-right2">13</div>
             </div>
@@ -83,6 +84,7 @@ import CenterHeader from "../components/CenterHeader/index.vue";
 import TransformCategory from "../components/TransformCategory/index.vue";
 import SalesList from "../components/SalesList/index.vue";
 import MapWarning from "../components/JiangSuMapWarning/index.vue";
+import OrderMap from '../components/OrderMap/index.vue'
 // import GdpTimeLineChart from '../components/GdpTimeLineChart/index.vue'
 // @ is an alias to /src
 import { ref, onMounted } from "vue";
@@ -100,7 +102,8 @@ export default {
     TransformCategory,
     SalesList,
     // GdpTimeLineChart,
-    MapWarning
+    // MapWarning,
+    OrderMap
   },
   setup() {
     const loading = ref(true);
