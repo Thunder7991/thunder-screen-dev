@@ -53,15 +53,23 @@
                   :color="['rgb(178,209,126)', 'rgb(16,116,49)']"
                 ></transform-category>
               </div>
-              <div class="right-left3"></div>
-              <div class="right-left4">11</div>
+              <div class="right-left3">
+                <thunder-fly-box startColor="rgb(251,253,142)" lineColor="#000">
+                   <real-time-order-data :data="realRTimeOrderData"></real-time-order-data>
+                </thunder-fly-box>
+               
+              </div>
+              <div class="right-left4">
+                <schedule-view ></schedule-view>
+              </div>
             </div>
             <div class="right-right">
               <div class="right-right1">
                 <sales-list :data="salesListData"></sales-list>
-                
               </div>
-              <div class="right-right2">13</div>
+              <div class="right-right2">
+                <sales-rank :data="salesRankData"></sales-rank>
+              </div>
             </div>
           </div>
         </div>
@@ -85,6 +93,9 @@ import TransformCategory from "../components/TransformCategory/index.vue";
 import SalesList from "../components/SalesList/index.vue";
 import MapWarning from "../components/JiangSuMapWarning/index.vue";
 import OrderMap from '../components/OrderMap/index.vue'
+import RealTimeOrderData from '../components/RealTimeOrderData/index.vue'
+import ScheduleView from '../components/ScheduleView/index.vue'
+import SalesRank from '../components/SalesRank/index.vue'
 // import GdpTimeLineChart from '../components/GdpTimeLineChart/index.vue'
 // @ is an alias to /src
 import { ref, onMounted } from "vue";
@@ -103,7 +114,10 @@ export default {
     SalesList,
     // GdpTimeLineChart,
     // MapWarning,
-    OrderMap
+    OrderMap,
+    RealTimeOrderData,
+    ScheduleView,
+    SalesRank
   },
   setup() {
     const loading = ref(true);
@@ -143,17 +157,14 @@ export default {
     .header {
       width: 100%;
       height: 167px;
-      background: yellow;
     }
     .separator {
       width: 100%;
       height: 10px;
-      background: #000;
     }
     .center {
       flex: 1;
       width: 100%;
-      background: green($color: #000000);
       display: flex;
       .left {
         flex: 0 0 860px;
@@ -170,23 +181,18 @@ export default {
         }
         .left2 {
           height: 320px;
-          background: yellow;
         }
         .left3 {
           height: 280px;
-          background: red;
         }
         .left4 {
           height: 230px;
-          background: yellowgreen;
         }
         .left5 {
           height: 360px;
-          background: #eee;
         }
         .left6 {
           height: 360px;
-          background: pink;
         }
       }
       .right {
@@ -225,7 +231,7 @@ export default {
             }
             .right-left3 {
               height: 350px;
-              background: pink;
+          
             }
             .right-left4 {
               height: 220px;
@@ -246,6 +252,7 @@ export default {
             .right-right2 {
               flex: 1;
               width: 100%;
+              height: 650px;
               background: white;
               margin-top: 20px;
             }

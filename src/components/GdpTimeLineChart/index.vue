@@ -2414,7 +2414,7 @@ export default {
         ]
       };
 
-      console.log(dataMap);
+  
     };
     onMounted(update);
     return {

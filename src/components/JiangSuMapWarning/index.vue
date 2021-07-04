@@ -152,7 +152,7 @@ export default {
                     }
                   },
                   formatter: function(params) {
-                    console.log(params);
+               
                     return `{title|${params.data.city}}\n{content|发生 ** 事件}`;
                   }
                 }
@@ -203,7 +203,7 @@ export default {
             //生成城市随机数
             const citylLength = center.length
             const cityIndex = Math.floor(Math.random() * citylLength)
-            console.log(cityIndex);
+     
             const eventIndex = Math.floor(Math.random() * 3) + 1
             _options.series[eventIndex].data = [{
               city:center[cityIndex].key,

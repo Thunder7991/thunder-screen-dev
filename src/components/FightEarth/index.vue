@@ -21,7 +21,7 @@ export default {
               coord: [item[3], item[4]]
             };
           });
-          console.log(airports, data);
+ 
           function getAirportCoord(idx) {
             return [data.airports[idx][3], data.airports[idx][4]];
           }

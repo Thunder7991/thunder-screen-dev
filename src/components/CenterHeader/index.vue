@@ -59,7 +59,7 @@ export default {
       headerData.value = [...newData.headerData];
     };
     onMounted(() => {
-        console.log(props.data);
+  
       update(props.data);
     });
     watch(

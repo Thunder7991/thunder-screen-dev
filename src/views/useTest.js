@@ -21,10 +21,10 @@ const store = useStore()
 
   const number= computed(() => store.state.number)
   watch(() => state.count,() => {
-      console.log('79');
+    
   })
   onMounted(() => {
-      console.log('987');
+     
   })
   return {
     state,

@@ -54,7 +54,7 @@
             },
             color: ['rgb(209,248,138)', 'rgba(65,65,65,.5)'],
             grid: {
-              left: 20,
+              left: 40,
               right: 0,
               bottom: 30,
               top: 20
@@ -63,6 +63,7 @@
               source
             },
             yAxis: {
+               show: true,
               type: 'value',
               splitLine: {
                 lineStyle: {

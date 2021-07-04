@@ -14,9 +14,9 @@ export default {
   setup(props) {
     const config = ref({});
     const update = () => {
-      const headerIndexData = [];
       const data = [];
-      const aligns = []
+      const aligns = [];
+      const headerIndexData = [];
       //数据处理逻辑
       //   const headerStyle = [
       //     { color: "red", width: "100px" },
@@ -25,23 +25,20 @@ export default {
       //   ];
       for (let i = 0; i < props.data.length; i++) {
         data[i] = [];
-      
         if (i % 2 === 0) {
-          headerIndexData[
-            i
-          ] = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgb(40,40,40)">
-            <div style="width:15px;height:15px;background:rgb(72,122,72);border-radius:50%;border:1px solid #fff;"/>
-          </div>`;
+          headerIndexData[i] = `
+<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgb(40,40,40)">
+  <div style="width:15px;height:15px;background:rgb(72,122,72);border-radius:50%;border:1px solid #fff;"/>
+</div>`;
         } else {
-          headerIndexData[
-            i
-          ] = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgb(40,40,40)">
-            <div style="width:15px;height:15px;background:rgb(38,88,104);border-radius:50%;border:1px solid #fff;"/>
-          </div>`;
+          headerIndexData[i] = `
+<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgb(40,40,40)">
+  <div style="width:15px;height:15px;background:rgb(38,88,104);border-radius:50%;border:1px solid #fff;"/>
+</div>`;
         }
         //5列
         for (let j = 0; j < 5; j++) {
-              aligns.push('center')
+          aligns.push("center");
           let text = "";
           switch (j) {
             case 0:
@@ -68,6 +65,7 @@ export default {
           }
         }
       }
+
       config.value = {
         headerData: [
           "城市浏览量",
@@ -77,6 +75,7 @@ export default {
           "人均订单量"
         ],
         // headerStyle,
+        showMenu:true,
         headerBg: "rgb(80,80,80)",
         headerHeight: "55", //表头的高度
         headerFontSize: 24, //表头字号
@@ -96,13 +95,14 @@ export default {
     onMounted(() => {
       update();
     });
+
     watch(
       () => props.data,
       () => {
         update();
       }
     );
-    watch;
+
     return {
       config
     };
